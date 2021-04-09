@@ -1,4 +1,16 @@
+import axios from 'axios';
 const Tabs = (topics) => {
+
+  const tabNav = document.createElement("div");
+	tabNav.classList.add("topics");
+	topics.forEach((topic) => {
+		const topicDiv = document.createElement("div");
+		tabNav.append(topicDiv);
+		topicDiv.classList.add("tab");
+		topicDiv.textContent = topic;
+	});
+
+	return tabNav;
   // TASK 3
   // ---------------------
   // Implement this function which takes an array of strings ("topics") as its only argument.
@@ -16,6 +28,17 @@ const Tabs = (topics) => {
 }
 
 const tabsAppender = (selector) => {
+
+  axios
+  .get("https://lambda-times-api.herokuapp.com/topics")
+  .then((response) => {
+    document.querySelector(selector).append(Tabs(response.data.topics));
+    console.log(document.querySelector(selector))
+  })
+  .catch((error) => {
+    console.log(error);
+  });
+}
   // TASK 4
   // ---------------------
   // Implement this function which takes a css selector as its only argument.
@@ -23,6 +46,6 @@ const tabsAppender = (selector) => {
   // Find the array of topics inside the response, and create the tabs using the Tabs component.
   // Append the tabs to the element in the DOM that matches the selector passed to the function.
   //
-}
+
 
 export { Tabs, tabsAppender }

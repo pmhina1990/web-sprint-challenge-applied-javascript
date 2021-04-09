@@ -14,7 +14,7 @@ You are going to create a Lambda Newspaper. Your job is going to be to create th
 
 In meeting the minimum viable product (MVP) specifications listed below, your project should look similar to the image linked below:
 
-[Lambda Times](https://tk-assets.lambdaschool.com/cac4803c-6e8f-4846-be0e-b20d82a34a73_lambda-times.png)
+[Lambda Times](n
 
 ## Instructions
 
@@ -75,7 +75,14 @@ There are two possible ways to submit this project to Canvas. Lambda Staff will 
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your own answers before hand.
 
 1. What is the DOM?
+It is a programming API of a document, that can allow access to manupulate it
+
 2. What is an event?
+Events are actions that happen in the system you are programming,these helps the user to interact with the webpage.
 3. What is an event listener?
+An event listener is a act that waits for an event to occur
+
 4. Why would we convert a NodeList into an Array?
+We would convert a NodeList into an Array to get an easy access to the content, and be able to use it.
 5. What is a component?
+Components are independent and reusable bits of code.
